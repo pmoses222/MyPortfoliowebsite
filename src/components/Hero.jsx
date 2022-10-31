@@ -2,14 +2,26 @@ import React from 'react'
 import styled from "styled-components"
 import Navigation from './Navigation'
 import img from "./hero.png"
+import {motion} from "framer-motion";
+
 
 function Hero() {
   return (
-    <HeroContainer>
+    <HeroContainer as ={motion.div}
+    
+    animate={{y:10}}
+    end ={{y:0}}
+    >
         <Navigation />
         <div className="hero-details grid">
-          <h1 className="hero-header">I'm Peter ! A Front-End Developer.</h1>
-          <img src={img} alt="hero" className='hero-image'/>
+          <motion.h1 className="hero-header" 
+          initial={{x:-100}}
+          animate={{x:10}}
+          end ={{x:0}} transition = {{duration:2}}>I'm Peter !  A Front-End Developer. </motion.h1>
+          <motion.img initial={{x:100}}
+          animate={{x:-10}}
+          end ={{x:0}} transition = {{duration:1.2}}
+          src={img} alt="hero" className='hero-image'/>
         </div>
 
 
@@ -23,6 +35,7 @@ const HeroContainer = styled.div`
   width:auto;
   .hero-header{
   font-size:1.5rem;
+  width:100%;
   
   }
   .hero-image{
@@ -66,7 +79,9 @@ const HeroContainer = styled.div`
 }
 
 @media screen and (min-width:1200px){
+  
   .hero-details{
+    margin:50px 20px;
     width:auto;
     .hero-header{
     font-size:3.5rem;

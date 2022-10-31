@@ -3,13 +3,20 @@ import styled from "styled-components"
 import {SiGithub} from "react-icons/si"
 import pgImage1 from "./covid-tracker.png"
 import pgImage2 from "./weatherapp.png"
+import {motion} from "framer-motion";
+
 
 function Projects() {
   return (
     <ProjectContainer>
       <h1 className="project-header">Personal Projects</h1>
       <div className="project-details">
-        <div className="project-list">
+        <motion.div 
+          initial={{x:-200}}
+          whileInView={{x:10}}
+          end ={{x:0}}
+          transition = {{duration:1.2}}
+          className="project-list">
           <img src={pgImage1} alt="project" className="project-image" />
           <div className="project-notes">
               <h3 className="project-name">Covid-19 Tracker</h3>
@@ -18,20 +25,22 @@ function Projects() {
                       className="project-link"><SiGithub /></a>
           </div>
           
-        </div>
+        </motion.div>
 
-        <div className="project-list">
-          <img src={pgImage2} alt="project" className="project-image" />
-          <div className="project-notes"> 
-              <h3 className="project-name">WeaForcast</h3>
-              <a href=" https://weaforecast.netlify.app/" className="project-demo">Live Demo</a>
-              <a href="https://github.com/pmoses222/WeForcast" 
-                     className="project-link"><SiGithub />
-                  </a>
-          
-          </div>
+        <motion.div 
+        className="project-list"
+        initial={{x:200}}
+        whileInView={{x:-10}}
+        end ={{x:0}}
+        transition = {{duration:1.2}}>
+             <img src={pgImage2} alt="project" className="project-image" />
+             <div className="project-notes"> 
+                 <h3 className="project-name">WeaForcast</h3>
+                  <a href=" https://weaforecast.netlify.app/" className="project-demo">Live Demo</a>
+                  <a href="https://github.com/pmoses222/WeForcast" className="project-link"><SiGithub /></a>
+             </div>
 
-        </div>
+        </motion.div>
        
       </div>
 
@@ -40,7 +49,7 @@ function Projects() {
   )
 }
 const ProjectContainer = styled.div`
-margin:20px;
+margin-top:6em;
 text-align:center;
 .project-header{
   font-size:1.5rem;
@@ -56,8 +65,8 @@ text-align:center;
     margin:30px;
 
     .project-image{
-       height:200px;
-       width:200px;
+       height:150px;
+       width:100%;
     }
     .project-notes{
       padding:20px;

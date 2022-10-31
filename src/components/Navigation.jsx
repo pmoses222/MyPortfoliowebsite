@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import styled from "styled-components";
 import {FiMenu} from "react-icons/fi"
 import Sidebar from './Sidebar';
+import {motion} from "framer-motion";
 
 function Navigation() {
 
@@ -12,9 +13,12 @@ function Navigation() {
   }
 
   return (
-    <NavContainer>
-      <div className="nav  grid" >
-         <h1 className="nav-logo">Peter Moses</h1>
+    <NavContainer as ={motion.div}
+     
+    animate={{y:10}}
+    end ={{y:0}}  >
+      <div className="nav  grid">
+         <motion.h1 className="nav-logo"  whileHover={{scale:1.1}}>Peter Moses</motion.h1>
          <div className="handburger" onClick ={Clicktoggle}>< FiMenu /></div>
          {toggle && <Sidebar  Clicktoggle= {Clicktoggle}/>}
          <ul className="nav-lists">
@@ -24,7 +28,9 @@ function Navigation() {
            <li className="nav-list">Contact</li>
          </ul>
 
-          <button className="nav-button">Download CV</button>
+         <button className="nav-button">
+           <a href="https://drive.google.com/file/d/1KrXcIQ77xGB1o0IxQ6PX2CR7HLRvHxRs/view?usp=sharing" className="link">Download CV</a>
+        </button>
       </div>
       
     </NavContainer>
@@ -37,6 +43,7 @@ const NavContainer = styled.div`
 
     .nav-logo{
      font-size:1rem;
+     cursor:pointer;
     } 
     .handburger{
       font-size:2rem;
@@ -50,6 +57,9 @@ const NavContainer = styled.div`
     }
     .nav-button{
     display:none;
+    .link{
+      text-decoration:none;
+    }
     }
   }
 

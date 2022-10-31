@@ -1,10 +1,16 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import styled from "styled-components"
 import aboutImg from "./Bg_low.png"
 
 function About() {
   return (
-   <AboutContainer>
+
+   <AboutContainer as = {motion.div}
+   initial ={{scale:0.7}} 
+   whileInView={{scale:1}} 
+   end ={{scale:1}} 
+   transition = {{duration:1.2}}>
       <div className="about-section">
         <img src={aboutImg} alt="about" className='about-image'/>
           <div className="about-details">
@@ -18,14 +24,13 @@ function About() {
               </p>
          </div>
     </div>
-
-
    </AboutContainer>
-  )
-}
+    )
+  }
+
 
 const AboutContainer = styled.div`
-margin-top:20px;
+margin-top:6em;
 .about-section{
  text-align:center;
  margin:0 20px;

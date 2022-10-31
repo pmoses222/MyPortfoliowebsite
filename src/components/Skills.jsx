@@ -8,10 +8,15 @@ import  { SiHtml5 ,
    SiNextdotjs,
    SiNodedotjs,
    SiExpress,SiPython,SiMongodb,SiPostgresql,SiGit,SiGithub,SiNetlify } from "react-icons/si"
+import {motion} from "framer-motion";
 
 function Skills() {
   return (
-  <SkillsContainer>
+  <SkillsContainer as ={motion.div} 
+  initial ={{scale:0.7}} 
+  whileInView={{scale:1}} 
+  end ={{scale:1}} 
+  transition = {{duration:1.2}}>
        <h1 className="skill-header">Skills and tools</h1>
        <div className="skill-details">
         <ul className="skill-lists">
@@ -36,7 +41,7 @@ function Skills() {
   )
 }
 const SkillsContainer = styled.div`
-margin-top:2em;
+margin-top:10em;
 .skill-header{
   text-align:center;
   font-size:1rem;
@@ -132,7 +137,7 @@ margin-top:2em;
     .skill-lists{
       .skill-list{
       list-style:none;
-      padding:50px;
+      padding:30px;
        svg{
            font-size:3rem;
          }

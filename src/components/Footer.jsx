@@ -1,12 +1,17 @@
 import React from 'react'
 import styled from "styled-components"
 import {FaLinkedin,FaGoogle,FaInstagram,FaTwitter} from "react-icons/fa"
+import { motion } from 'framer-motion'
 
 function Footer() {
   return (
    <FooterContainer>
      <div className="footer grid">
-     <div className="footer-location">
+      <motion.div className="footer-location"
+      initial={{x:200}}
+      whileInView={{x:-10}}
+      end ={{x:0}}
+      transition = {{duration:1.2}}>
           <h3 className="location-header">Address</h3>
           <div className="location-details">
              <div className="address">202,Muritala Mohammed Way <br/>Ebute-Metta,Lagos.</div>
@@ -14,7 +19,7 @@ function Footer() {
                 <p><span>Tel:</span> +23407037666259</p>
              </div>
          </div>
-     </div>
+      </motion.div>
 
      <div className="footer-links">
        <h3 className="links-header"> Quick Links</h3>
@@ -26,7 +31,10 @@ function Footer() {
          </div>
      </div>
 
-     <div className="footer-social">
+     <motion.div className="footer-social"
+        initial={{x:-200}}
+        whileInView={{x:10}}
+        end ={{x:0}}>
         <h3 className="social-header">Social</h3>
         <div className="footer-icons">
            <p className="icon"><FaGoogle /></p>
@@ -34,7 +42,7 @@ function Footer() {
            <p className="icon"><FaTwitter /></p>
            <p className="icon"><FaInstagram /></p>
        </div>
-     </div>
+     </motion.div>
 
      </div>
       
@@ -43,6 +51,7 @@ function Footer() {
 }
 
 const FooterContainer = styled.div`
+margin-top:6em;
 .footer{
   margin:0 20px;
   .footer-location{
