@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 function Footer() {
   return (
    <FooterContainer>
-     <div className="footer grid">
+     <div className="footer grid" id='foot'>
       <motion.div className="footer-location"
       initial={{x:200}}
       whileInView={{x:-10}}
@@ -52,6 +52,9 @@ function Footer() {
 
 const FooterContainer = styled.div`
 margin-top:6em;
+#foot{
+  
+}
 .footer{
   margin:0 20px;
   .footer-location{

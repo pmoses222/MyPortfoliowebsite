@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FiMenu} from "react-icons/fi"
 import Sidebar from './Sidebar';
 import {motion} from "framer-motion";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Navigation() {
 
@@ -13,19 +14,20 @@ function Navigation() {
   }
 
   return (
+    
     <NavContainer as ={motion.div}
-     
     animate={{y:10}}
     end ={{y:0}}  >
-      <div className="nav  grid">
+      
+     <div className="nav  grid">
          <motion.h1 className="nav-logo"  whileHover={{scale:1.1}}>Peter Moses</motion.h1>
+           {toggle && <Sidebar Clicktoggle={Clicktoggle} />}
          <div className="handburger" onClick ={Clicktoggle}>< FiMenu /></div>
-         {toggle && <Sidebar  Clicktoggle= {Clicktoggle}/>}
          <ul className="nav-lists">
-           <li className="nav-list">Home</li>
-           <li className="nav-list">About</li>
-           <li className="nav-list">Projects</li>
-           <li className="nav-list">Contact</li>
+           <AnchorLink id ="home" href='#hero'><li className="nav-list">Home</li></AnchorLink>
+           <AnchorLink id ="home" href='#about'><li className="nav-list">About</li></AnchorLink>
+           <AnchorLink id ="home" href='#project'><li className="nav-list">Projects</li></AnchorLink>
+           <AnchorLink id ="home" href='#foot'><li className="nav-list">Contact</li></AnchorLink>
          </ul>
 
          <button className="nav-button">
@@ -58,7 +60,7 @@ const NavContainer = styled.div`
     .nav-button{
     display:none;
     .link{
-      text-decoration:none;
+      
     }
     }
   }
@@ -80,9 +82,13 @@ const NavContainer = styled.div`
       justify-content:center;
       align-items:center;
       gap:40px;
+      #home{
+        text-decoration:none;
+      }
        .nav-list{
         list-style:none;
         cursor:pointer;
+        color:var(--fonts-color);
        }
      }
      .nav-button{
@@ -94,6 +100,10 @@ const NavContainer = styled.div`
        padding:0 20px;
        border-radius:10px;
        cursor:pointer;
+       .link{
+         text-decoration:none;
+         color:var(--buttons-color);
+       }
 
      }
    }

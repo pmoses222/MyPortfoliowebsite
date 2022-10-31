@@ -11,7 +11,7 @@ function About() {
    whileInView={{scale:1}} 
    end ={{scale:1}} 
    transition = {{duration:1.2}}>
-      <div className="about-section">
+      <div className="about-section" id='about'>
         <img src={aboutImg} alt="about" className='about-image'/>
           <div className="about-details">
             <h1 className="about-header">About Me</h1>
@@ -31,6 +31,9 @@ function About() {
 
 const AboutContainer = styled.div`
 margin-top:6em;
+#about{
+  
+}
 .about-section{
  text-align:center;
  margin:0 20px;

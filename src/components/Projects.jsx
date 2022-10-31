@@ -8,7 +8,7 @@ import {motion} from "framer-motion";
 
 function Projects() {
   return (
-    <ProjectContainer>
+    <ProjectContainer id='project'>
       <h1 className="project-header">Personal Projects</h1>
       <div className="project-details">
         <motion.div 
@@ -49,6 +49,9 @@ function Projects() {
   )
 }
 const ProjectContainer = styled.div`
+#project{
+
+}
 margin-top:6em;
 text-align:center;
 .project-header{

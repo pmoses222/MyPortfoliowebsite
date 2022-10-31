@@ -13,7 +13,7 @@ function Hero() {
     end ={{y:0}}
     >
         <Navigation />
-        <div className="hero-details grid">
+        <div className="hero-details grid" id='hero'>
           <motion.h1 className="hero-header" 
           initial={{x:-100}}
           animate={{x:10}}
@@ -29,6 +29,9 @@ function Hero() {
   )
 }
 const HeroContainer = styled.div`
+#hero{
+  
+}
 
 .hero-details{
   margin:0 20px;
@@ -42,6 +45,7 @@ const HeroContainer = styled.div`
     grid-column:9/9;
     height:180px;
     width:200px;
+    z-index:-99;
     
   }
 
@@ -53,7 +57,6 @@ const HeroContainer = styled.div`
     font-size:2.0rem;
     }
     .hero-image{
-      
       height:200px;
       width:250px;
       
