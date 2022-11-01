@@ -4,6 +4,7 @@ import {FiMenu} from "react-icons/fi"
 import Sidebar from './Sidebar';
 import {motion} from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import logo from "./Logo.png";
 
 function Navigation() {
 
@@ -20,7 +21,7 @@ function Navigation() {
     end ={{y:0}}  >
       
      <div className="nav  grid">
-         <motion.h1 className="nav-logo"  whileHover={{scale:1.1}}>Peter Moses</motion.h1>
+         <motion.img src = {logo} className="nav-logo"  whileHover={{scale:1.1}}/>
            {toggle && <Sidebar Clicktoggle={Clicktoggle} />}
          <div className="handburger" onClick ={Clicktoggle}>< FiMenu /></div>
          <ul className="nav-lists">
@@ -44,7 +45,9 @@ const NavContainer = styled.div`
      margin:0 20px;
 
     .nav-logo{
-     font-size:1rem;
+     height:30px;
+     width:120px;
+     text-align:center;
      cursor:pointer;
     } 
     .handburger{
@@ -72,7 +75,10 @@ const NavContainer = styled.div`
       margin:0 20px;
  
      .nav-logo{
-      font-size:1.5rem;
+      height:40px;
+      width:170px;
+      text-align:center;
+      cursor:pointer;
      } 
      .handburger{
        display:none;

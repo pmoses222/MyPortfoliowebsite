@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import {FaLinkedin,FaGoogle,FaInstagram,FaTwitter} from "react-icons/fa"
 import { motion } from 'framer-motion'
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Footer() {
   return (
@@ -24,10 +25,10 @@ function Footer() {
      <div className="footer-links">
        <h3 className="links-header"> Quick Links</h3>
          <div className="footer-lists">
-            <p className="footer-list">Home</p>
-            <p className="footer-list">About</p>
-            <p className="footer-list">Projects</p>
-            <p className="footer-list">Hire Me</p>
+          <AnchorLink id ="home" href='#hero'><p className="footer-list">Home</p></AnchorLink>
+           <AnchorLink id ="home" href='#about'><p className="footer-list">About</p></AnchorLink>
+           <AnchorLink id ="home" href='#project'><p className="footer-list">Projects</p></AnchorLink>
+           <AnchorLink id ="home" href='#foot'><p className="footer-list">Contact</p></AnchorLink>
          </div>
      </div>
 
@@ -37,10 +38,10 @@ function Footer() {
         end ={{x:0}}>
         <h3 className="social-header">Social</h3>
         <div className="footer-icons">
-           <p className="icon"><FaGoogle /></p>
-           <p className="icon"><FaLinkedin /></p>
-           <p className="icon"><FaTwitter /></p>
-           <p className="icon"><FaInstagram /></p>
+           <a href="mailto:pmoses222@gmail.com" className="social-link"><p className="icon"><FaGoogle /></p></a>
+           <a href="https://www.linkedin.com/in/moses-oluwatosin-aca-6a4511120/recent-activity/shares/" className="social-link"><p className="icon"><FaLinkedin /></p></a>
+           <a href="https://twitter.com/peterafe222" className="social-link"><p className="icon"><FaTwitter /></p></a>
+           <a href="https://www.instagram.com/pmoses7505/" className="social-link"><p className="icon"><FaInstagram /></p></a>
        </div>
      </motion.div>
 
@@ -83,9 +84,12 @@ margin-top:6em;
    }
    .footer-lists{
       font-size:0.8rem;
-     
+      text-decoration:none;
+      #home{
+        text-decoration:none;
+      }
      .footer-list{
-      
+      color:var(--fonts-color);
      }
    }
   }
