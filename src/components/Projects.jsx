@@ -55,7 +55,7 @@ const ProjectContainer = styled.div`
 margin-top:6em;
 text-align:center;
 .project-header{
-  font-size:1.5rem;
+  font-size:1rem;
 }
 .project-details{
   padding:20px;
@@ -64,18 +64,18 @@ text-align:center;
   .project-list{
     background:#0a0a15;
     border-radius:20px;
-    padding: 30px 50px;
-    margin:30px;
+    padding: 20px 10px;
+    margin:20px;
 
     .project-image{
        height:150px;
-       width:100%;
+       width:auto;
     }
     .project-notes{
-      padding:20px;
+      padding:10px 0;
      
       .project-name{
-        font-size:1rem;
+        font-size:0.8rem;
       }
       .project-demo{
         text-decoration:none;

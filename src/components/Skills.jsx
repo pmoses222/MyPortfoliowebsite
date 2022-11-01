@@ -41,23 +41,25 @@ function Skills() {
   )
 }
 const SkillsContainer = styled.div`
-margin-top:10em;
+margin-top:5em;
 .skill-header{
   text-align:center;
+  margin-left:30px;
   font-size:1rem;
 }
 .skill-details{
-  padding:0 20px;
+  padding:10px;
   
 
  .skill-lists{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,0.5fr);
     place-items:center;
+    margin:0 50px;
     
    .skill-list{
     list-style:none;
-    padding:20px;
+    padding:30px;
     background:#0a0a15;
     border-radius:50%;
     height:50px;
@@ -72,7 +74,7 @@ margin-top:10em;
   
   .skill-header{
     text-align:center;
-    font-size:1.5rem;
+    font-size:1rem;
   }
   .skill-details{
     margin:0 0px;
@@ -80,7 +82,7 @@ margin-top:10em;
   
    .skill-lists{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+      grid-template-columns:repeat(3,1fr);
       place-items:center;
       
       

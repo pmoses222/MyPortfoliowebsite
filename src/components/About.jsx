@@ -16,9 +16,9 @@ function About() {
           <div className="about-details">
             <h1 className="about-header">About Me</h1>
                <p className="about-summary">
-                    An individual from an accounting background with an immerse passion for technology and finance.
+                    An individual from a financial background with an immerse passion for technology and finance.
                     Three years learning experience in Python, JavaScript, Web development and UI/UX Design
-                    Methodologies. A quick learner who ready to adapt and learn the latest technologies. I have worked on
+                    Methodologies. A quick learner who is ready to adapt and learn the latest technologies. I have worked on
                     some projects and still ongoing. My Domain Knowledge, Team-work and collaborating skills can be of
                     good value to any engineering team.
               </p>
@@ -40,10 +40,10 @@ margin-top:6em;
   .about-details{
     
     .about-header{
-     font-size:1.5rem;
+     font-size:1rem;
     }
     .about-summary{
-      font-size:0.8rem;
+      font-size:0.7rem;
       padding:5px;
     }
   }
@@ -60,7 +60,28 @@ margin-top:6em;
 }
 
 @media screen and (min-width:960px){
-  
+  .about-section{
+    text-align:center;
+    margin:0 20px;
+     .about-details{
+       
+       .about-header{
+        font-size:2rem;
+       }
+       .about-summary{
+         font-size:0.9rem;
+         padding:30px 100px;
+         
+       }
+     }
+     .about-image{
+       height:250px;
+       width:250px;
+       background-color:#1d1d3f;
+       border-radius:50%;
+   
+     }
+   }
 }
 
 @media screen and (min-width:1200px){

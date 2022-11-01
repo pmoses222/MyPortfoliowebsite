@@ -62,16 +62,16 @@ margin-top:6em;
     text-align:center;
     grid-column:1/3;
    .location-header{
-    font-size:1rem;
+    font-size:0.8rem;
    }
    .location-details{
-      font-size:1rem;
+      font-size:0.5rem;
       .address{
-        font-size:0.8rem;
+        font-size:0.5rem;
       }
       
       .phone{
-        font-size:0.8rem;
+        font-size:0.5rem;
       }
    }
   }
@@ -80,10 +80,10 @@ margin-top:6em;
     text-align:center;
     grid-column:7/9;
    .links-header{
-    font-size:1rem;
+    font-size:0.8rem;
    }
    .footer-lists{
-      font-size:0.8rem;
+      font-size:0.5rem;
       text-decoration:none;
       #home{
         text-decoration:none;
@@ -97,7 +97,7 @@ margin-top:6em;
     text-align:center;
     grid-column:4/6;
    .social-header{
-   font-size:1rem;
+   font-size:0.8rem;
    }
    .footer-icons{
      display:flex;
@@ -106,7 +106,7 @@ margin-top:6em;
      cursor:pointer;
      list-style:none;
      .icon{
-       font-size:2rem;
+       font-size:1rem;
        color:var(--fonts-color);
        width:auto;
   
@@ -139,7 +139,64 @@ margin-top:6em;
     justify-content:center;
     align-items:center;
     gap:150px;
+    .footer-location{
+      text-align:center;
+      grid-column:2/4;
+     .location-header{
+      font-size:1rem;
+     }
+     .location-details{
+        font-size:0.8rem;
+        .address{
+          font-size:0.8rem;
+        }
+        
+        .phone{
+          font-size:0.8rem;
+        }
+     }
+    }
+  
+    .footer-links{
+      text-align:center;
+      grid-column:7/9;
+     .links-header{
+      font-size:1rem;
+     }
+     .footer-lists{
+        font-size:0.8rem;
+        text-decoration:none;
+        #home{
+          text-decoration:none;
+        }
+       .footer-list{
+        color:var(--fonts-color);
+       }
+     }
+    }
+    .footer-social{
+      text-align:center;
+      grid-column:4/6;
+     .social-header{
+     font-size:1rem;
+     }
+     .footer-icons{
+       display:flex;
+       justify-content:center;
+       gap:20px;
+       cursor:pointer;
+       list-style:none;
+       .icon{
+         font-size:1rem;
+         color:var(--fonts-color);
+         width:auto;
+    
+       }
+     }
+    }
+   
   }
+  
 }
 
 
