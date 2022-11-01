@@ -21,8 +21,8 @@ function Navigation() {
     end ={{y:0}}  >
       
      <div className="nav  grid">
-         <motion.img src = {logo} className="nav-logo"  whileHover={{scale:1.1}}/>
-           {toggle && <Sidebar Clicktoggle={Clicktoggle} />}
+       <div className="nav-image"><motion.img src = {logo} className="nav-logo"  whileHover={{scale:1.1}}/></div>
+         {toggle && <Sidebar Clicktoggle={Clicktoggle} />}
          <div className="handburger" onClick ={Clicktoggle}>< FiMenu /></div>
          <ul className="nav-lists">
            <AnchorLink id ="home" href='#hero'><li className="nav-list">Home</li></AnchorLink>
@@ -43,15 +43,18 @@ function Navigation() {
 const NavContainer = styled.div`
  .nav{
      margin:0 20px;
-
-    .nav-logo{
-     height:30px;
-     width:120px;
-     text-align:center;
-     cursor:pointer;
-    } 
+    .nav-image{
+      padding:10px;
+      .nav-logo{
+        height:30px;
+        width:120px;
+        text-align:center;
+        cursor:pointer;
+       } 
+    }
+    
     .handburger{
-      font-size:2rem;
+      font-size:2.5rem;
       grid-column:9/9;
     }
     .nav-lists{

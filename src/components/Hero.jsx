@@ -17,7 +17,7 @@ function Hero() {
           <motion.h1 className="hero-header" 
           initial={{x:-100}}
           animate={{x:10}}
-          end ={{x:0}} transition = {{duration:2}}>I'm Peter !  A Front-End Developer. </motion.h1>
+          end ={{x:0}} transition = {{duration:2}}>I'm Peter ! <br/> A Front-End Developer.</motion.h1>
           <motion.img initial={{x:100}}
           animate={{x:-10}}
           end ={{x:0}} transition = {{duration:1.2}}
@@ -35,16 +35,18 @@ const HeroContainer = styled.div`
 
 .hero-details{
   margin:0 20px;
-  width:auto;
+  width:100%;
   .hero-header{
   font-size:1.5rem;
-  width:100%;
+  padding:40px 0;
+  width:200%;
   
   }
   .hero-image{
     grid-column:9/9;
     height:180px;
     width:200px;
+    padding:40px 0;
     z-index:-99;
     
   }
@@ -87,11 +89,11 @@ const HeroContainer = styled.div`
     margin:50px 20px;
     width:auto;
     .hero-header{
-    font-size:3.5rem;
+    font-size:3.0rem;
     }
     .hero-image{
-      height:400px;
-      width:500px;
+      height:370px;
+      width:400px;
       
     }
   

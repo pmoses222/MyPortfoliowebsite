@@ -44,7 +44,6 @@ const SkillsContainer = styled.div`
 margin-top:5em;
 .skill-header{
   text-align:center;
-  margin-left:30px;
   font-size:1rem;
 }
 .skill-details{
@@ -53,19 +52,20 @@ margin-top:5em;
 
  .skill-lists{
     display:grid;
-    grid-template-columns:repeat(3,0.5fr);
+    grid-template-columns:repeat(3,1fr);
     place-items:center;
     margin:0 50px;
     
    .skill-list{
+    
     list-style:none;
-    padding:30px;
+    padding:10px;
     background:#0a0a15;
     border-radius:50%;
-    height:50px;
-    width:50px;
+    height:40px;
+    width:40px;
      svg{
-         font-size:3rem;
+         font-size:2rem;
        }
     }
   }
