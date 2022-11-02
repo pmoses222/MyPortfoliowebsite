@@ -2,12 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import {GiCancel} from "react-icons/gi"
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import {motion} from "framer-motion";
+
 
 
 function Sidebar({Clicktoggle}) {
   return (
      <>
-     <SidebarContainer>
+     <SidebarContainer as = {motion.div}
+     initial={{x:200}}
+     whileInView={{x:-10}}
+     end ={{x:0}}
+     transition = {{duration:0.5}}>
        <div className="handburger" onClick={Clicktoggle}><GiCancel /></div>
        <ul className="sidebar-lists">
            <AnchorLink id ="home" href='#about'><li className="sidebar-list">About</li></AnchorLink>

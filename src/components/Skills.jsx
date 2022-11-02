@@ -17,8 +17,8 @@ function Skills() {
   whileInView={{scale:1}} 
   end ={{scale:1}} 
   transition = {{duration:1.2}}>
+      <div className="skill-details">
        <h1 className="skill-header">Skills and tools</h1>
-       <div className="skill-details">
         <ul className="skill-lists">
           <li className="skill-list"><SiHtml5/></li>
           <li className="skill-list"><SiCss3/></li>
@@ -42,42 +42,47 @@ function Skills() {
 }
 const SkillsContainer = styled.div`
 margin-top:5em;
-.skill-header{
-  text-align:center;
-  font-size:1rem;
-}
+
 .skill-details{
   padding:10px;
+  .skill-header{
+    text-align:center;
+    font-size:1rem;
+    margin-right:20px;
+  }
   
 
  .skill-lists{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    place-items:center;
-    margin:0 50px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-items:center;
+    
     
    .skill-list{
     
     list-style:none;
-    padding:10px;
+    padding:40px;
     background:#0a0a15;
     border-radius:50%;
     height:40px;
     width:40px;
      svg{
          font-size:2rem;
+         
        }
     }
   }
 }
 @media screen and (min-width:620px){
   
-  .skill-header{
-    text-align:center;
-    font-size:1rem;
-  }
+  
   .skill-details{
     margin:0 0px;
+    .skill-header{
+      text-align:center;
+      font-size:1rem;
+      margin-right:-30px;
+    }
     
   
    .skill-lists{
@@ -85,8 +90,7 @@ margin-top:5em;
       grid-template-columns:repeat(3,1fr);
       place-items:center;
       
-      
-     .skill-list{
+      .skill-list{
       list-style:none;
       padding:30px;
       background:#0a0a15;
@@ -102,12 +106,14 @@ margin-top:5em;
 }
 
 @media screen and (min-width:960px){
-  .skill-header{
-    text-align:center;
-    font-size:1.5rem;
-  }
+  
   .skill-details{
     margin:0 0px;
+    .skill-header{
+      text-align:center;
+      font-size:2rem;
+      margin-left:20px;
+    }
     
   
    .skill-lists{
